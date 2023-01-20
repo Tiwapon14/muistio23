@@ -67,6 +67,7 @@ app.get('/api/notes', (req, res) => {
       }
   
     const note = new Note({
+      id: "",
       content: body.content,
       important: body.important || false,
       date: new Date(),
