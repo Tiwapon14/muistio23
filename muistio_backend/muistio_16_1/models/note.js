@@ -12,6 +12,7 @@ mongoose.connect(url)
 })
 
 const noteSchema = new mongoose.Schema({
+    id: String,
   content: String,
   date: Date,
   important: Boolean,
