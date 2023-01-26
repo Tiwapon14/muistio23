@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+                                    //Pitää muuttaa oikea polkua missä konsion oli
+    "build:ui": "rm -rf build && cd ../muistio_frontend/ && npm run build && cp -r build ../muistio_backend",
+    "deploy": "flyctl deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "flyctl logs",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
